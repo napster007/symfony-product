@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product Details: {{ product.name }}{% endblock %}
+
+{% block body %}
+
+<table>
+
+    <tbody>
+
+            <tr>
+                <td>NAME: </td><td>{{ product.name }}</td>
+            </tr>
+            <tr>
+                <td>DESCRIPTION: </td><td>{{ product.description }}</td>
+            </tr>
+            <tr>
+                <td>SIZE: </td><td>{{ product.size }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="{{ path('product_index') }}">Back to Product List</a>
+                </td>
+                <td>
+                    <a href="{{ path('product_update', { id: product.id }) }}">Update</a>
+                </td>
+            </tr>
+
+    </tbody>
+</table>
+
+{% endblock %}
